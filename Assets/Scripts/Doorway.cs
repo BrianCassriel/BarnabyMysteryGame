@@ -17,7 +17,7 @@ public class Doorway : MonoBehaviour
         new Vector3(80, 0, 0)
     };
 
-    private Vector3 GetDoorwayLocation()
+    public Vector3 GetDoorwayLocation()
     {
         return _doorwayLocations[doorwayNumber];
     }
