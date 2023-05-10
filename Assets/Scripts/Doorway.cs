@@ -10,8 +10,8 @@ public class Doorway : MonoBehaviour
     
     private readonly List<Vector3> _doorwayLocations = new List<Vector3>
     {
-        new Vector3(40, 0, 0),
-        new Vector3(40, -20, 0),
+        new Vector3(32.44f, 6.5f, 0),
+        new Vector3(13.3f, 7.9f, 0),
         new Vector3(40, -30, 0),
         new Vector3(80, 0, 0)
     };
