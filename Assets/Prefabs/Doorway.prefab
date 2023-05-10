@@ -72,4 +72,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barnaby: {fileID: 0}
-  doorwayNumber: 0
+  mapLocationKey: Town
