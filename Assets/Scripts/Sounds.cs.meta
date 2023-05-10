@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: d6aa4c124951843e6991db8964f62626
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - GameStartSound: {fileID: 8300000, guid: da1985bb069b143069df025fc43f0a54, type: 3}
+  - GameLoseSound: {fileID: 8300000, guid: 49fbbb1c65e5745fe98dcf3512ab879a, type: 3}
+  - OpenDoor: {fileID: 8300000, guid: 9a8bdc863b01c41b28b81dc5d40507f3, type: 3}
+  - FinalGuess: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
