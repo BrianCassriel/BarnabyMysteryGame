@@ -34,5 +34,6 @@ public class Doorway : MonoBehaviour
     {
         barnaby.transform.position = GetDoorwayLocation();
         camera.transform.position = new Vector3(barnaby.transform.position.x, barnaby.transform.position.y, -10);
+        Sounds.Instance.PlayDoorSound();
     }
 }
