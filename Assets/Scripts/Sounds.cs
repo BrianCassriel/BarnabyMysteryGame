@@ -39,6 +39,6 @@ public class Sounds : MonoBehaviour
 
     public void PlayDoorSound()
     {
-        audioSource.PlayOneShot(OpenDoor);
+        audioSource.PlayOneShot(OpenDoorSound);
     }
 }
