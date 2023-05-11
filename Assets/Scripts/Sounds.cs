@@ -6,6 +6,7 @@ public class Sounds : MonoBehaviour
 {
     public AudioClip GameStartSound;
     public AudioClip GameLoseSound;
+    public AudioClip GameWinSound;
     public AudioClip OpenDoorSound;
     public static Sounds Instance;
 
@@ -24,7 +25,7 @@ public class Sounds : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
     public void PlayStart()
@@ -35,6 +36,11 @@ public class Sounds : MonoBehaviour
     public void PlayLose()
     {
         audioSource.PlayOneShot(GameLoseSound);
+    }
+
+    public void PlayWon()
+    {
+        audioSource.PlayOneShot(GameWinSound);
     }
 
     public void PlayDoorSound()
