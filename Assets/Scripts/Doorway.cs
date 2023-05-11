@@ -1,29 +1,27 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class Doorway : MonoBehaviour
 {
-    public Barnaby barnaby;
-    public string mapLocationKey;
+    public GameObject barnaby;
+    public new Camera camera;
+    public int doorwayNumber;
 
-    private readonly Dictionary<string, Vector4> _mapLocations = new Dictionary<string, Vector4>
+    private readonly List<Vector3> _doorwayLocations = new List<Vector3>
     {
-        { "Town", new Vector4(0, 0, 0, 12) },
-        { "HouseOne", new Vector4(40, 0, 0, 6) },
-        { "HouseTwo", new Vector4(40, -20, 0, 6) },
-        { "HouseThree", new Vector4(40, -40, 0, 6) },
-        { "HouseFour", new Vector4(80, 0, 0, 4) },
+        new Vector3(32.44f, 6.5f, 0),
+        new Vector3(13.3f, 7.9f, 0),
+        new Vector3(40, -30, 0),
+        new Vector3(80, 0, 0)
     };
 
-    private Vector4 GetMapLocation()
+    public Vector3 GetDoorwayLocation()
     {
-        return _mapLocations[mapLocationKey];
+        return _doorwayLocations[doorwayNumber];
     }
-
+    
     private void OnTriggerStay2D(Collider2D other)
     {
         if (Input.GetKey(KeyCode.F))
@@ -34,21 +32,8 @@ public class Doorway : MonoBehaviour
 
     private void MoveFromDoorway()
     {
-        barnaby.Warp(GetMapLocation());
-        // Sounds.Instance.PlayDoorSound(); // Not instantiated for some reason?
-    }
-
-    public void AutoSetBarnabySize(Vector4 location)
-    {
-        if (location.Equals(_mapLocations["Town"]))
-            barnaby.transform.localScale = new Vector3(1f, 1f, 1f);
-        else if (location.Equals(_mapLocations["HouseOne"])
-                            || location.Equals(_mapLocations["HouseTwo"])
-                            || location.Equals(_mapLocations["HouseTwo"]))
-            barnaby.transform.localScale = new Vector3(2/3f, 2/3f, 1f);
-        else if (location.Equals(_mapLocations["HouseFour"]))
-            barnaby.transform.localScale = new Vector3(1/2f, 1/2f, 1f);
-        else
-            barnaby.transform.localScale = new Vector3(1f, 1f, 1f);
+        barnaby.transform.position = GetDoorwayLocation();
+        camera.transform.position = new Vector3(barnaby.transform.position.x, barnaby.transform.position.y, -10);
+        Sounds.Instance.PlayDoorSound();
     }
 }
