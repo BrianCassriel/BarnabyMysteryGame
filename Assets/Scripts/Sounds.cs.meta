@@ -6,7 +6,8 @@ MonoImporter:
   defaultReferences:
   - GameStartSound: {fileID: 8300000, guid: da1985bb069b143069df025fc43f0a54, type: 3}
   - GameLoseSound: {fileID: 8300000, guid: 49fbbb1c65e5745fe98dcf3512ab879a, type: 3}
-  - OpenDoorSound: {fileID: 8300000, guid: 0904f04514f3e49e18552907d57a652f, type: 3}
+  - OpenDoor: {fileID: 8300000, guid: 9a8bdc863b01c41b28b81dc5d40507f3, type: 3}
+  - FinalGuess: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

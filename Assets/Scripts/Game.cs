@@ -16,13 +16,11 @@ public class Game : MonoBehaviour
     {
         print("You win!");
         throw new NotImplementedException();
-        Sounds.Instance.PlayWon();
     }
     
     public void ShowLoseUI()
     {
         print("You lose!");
         throw new NotImplementedException();
-        Sounds.Instance.PlayLose();
     }
 }
