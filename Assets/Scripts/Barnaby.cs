@@ -4,44 +4,46 @@ using UnityEngine;
 
 public class Barnaby : MonoBehaviour
 {
-    public Barnaby barnaby;
     public new Camera camera;
+    public Doorway doorway;
     public float moveSpeed = 5f;
-    // public Animator animator;
+
+    private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _body2D;
-    private Vector2 movement;
+    private Vector2 _movement;
 
     private void Start()
     {
         this._body2D = GetComponent<Rigidbody2D>();
+        this._spriteRenderer = GetComponent<SpriteRenderer>();
+        transform.position = new Vector3(-41.6f, 21f, 0);
     }
 
-    void Update()
+    private void Update()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
-        
-        // animator.SetFloat("Horizontal", movement.x);
-        // animator.SetFloat("Vertical", movement.y);
-        // animator.SetFloat("Speed", movement.sqrMagnitude);
+        _movement.x = Input.GetAxisRaw("Horizontal");
+        _movement.y = Input.GetAxisRaw("Vertical");
     }
-
+    
     private void FixedUpdate()
     {
-        _body2D.MovePosition(_body2D.position + movement * moveSpeed * Time.fixedDeltaTime);
-    }
+        _body2D.MovePosition(_body2D.position + _movement * moveSpeed * Time.fixedDeltaTime);
 
-    private void OnTriggerStay2D(Collider2D other)
-    {
-        if (Input.GetKey(KeyCode.F))
+        if (_movement.x > 0)
         {
-            MoveFromDoorway(other);
+            _spriteRenderer.flipX = false;
+        }
+        if (_movement.x < 0)
+        {
+            _spriteRenderer.flipX = true;
         }
     }
 
-    private void MoveFromDoorway(Collider2D other)
+    public void Warp(Vector4 location)
     {
-        barnaby.transform.position = other.GetComponent<Doorway>().GetDoorwayLocation();
-        camera.transform.position = new Vector3(barnaby.transform.position.x, barnaby.transform.position.y, camera.transform.position.z);
+        transform.position = new Vector3(location.x, location.y, 0);
+        camera.transform.position = new Vector3(location.x, location.y, -10);
+        camera.orthographicSize = location.w;
+        doorway.AutoSetBarnabyScale(location);
     }
 }
