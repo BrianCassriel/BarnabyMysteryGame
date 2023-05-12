@@ -35,10 +35,10 @@ public class Doorway : MonoBehaviour
     private void MoveFromDoorway()
     {
         barnaby.Warp(GetMapLocation());
-        // Sounds.Instance.PlayDoorSound(); // Not instantiated for some reason?
+        Sounds.Instance.PlayDoorSound();
     }
 
-    public void AutoSetBarnabySize(Vector4 location)
+    public void AutoSetBarnabyScale(Vector4 location)
     {
         if (location.Equals(_mapLocations["Town"]))
             barnaby.transform.localScale = new Vector3(1f, 1f, 1f);

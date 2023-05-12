@@ -16,7 +16,7 @@ public class Barnaby : MonoBehaviour
     {
         this._body2D = GetComponent<Rigidbody2D>();
         this._spriteRenderer = GetComponent<SpriteRenderer>();
-        transform.position = new Vector3(0, 0, 0);
+        transform.position = new Vector3(-41.6f, 21f, 0);
     }
 
     private void Update()
@@ -44,6 +44,6 @@ public class Barnaby : MonoBehaviour
         transform.position = new Vector3(location.x, location.y, 0);
         camera.transform.position = new Vector3(location.x, location.y, -10);
         camera.orthographicSize = location.w;
-        doorway.AutoSetBarnabySize(location);
+        doorway.AutoSetBarnabyScale(location);
     }
 }
