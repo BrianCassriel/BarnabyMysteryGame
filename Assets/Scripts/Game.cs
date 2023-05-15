@@ -7,6 +7,11 @@ public class Game : MonoBehaviour
 {
     private int _cluesFound = 0;
 
+    private void Start()
+    {
+        Sounds.Instance.PlayStart();
+    }
+
     public void IncrementCluesFound()
     {
         _cluesFound++;
