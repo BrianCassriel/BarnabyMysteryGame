@@ -11,6 +11,7 @@ public class Game : MonoBehaviour
     private void Start()
     {
         Sounds.Instance.PlayStart();
+        Sounds.Instance.PlayBackgroundMusic();
     }
 
     public void IncrementCluesFound()

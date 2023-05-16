@@ -8,6 +8,9 @@ public class Sounds : MonoBehaviour
     public AudioClip GameLoseSound;
     public AudioClip GameWinSound;
     public AudioClip OpenDoorSound;
+    public AudioClip ClueBookSound;
+    public AudioClip BackgroundMusic;
+
     public static Sounds Instance;
 
     private AudioSource audioSource;
@@ -44,5 +47,15 @@ public class Sounds : MonoBehaviour
     public void PlayDoorSound()
     {
         audioSource.PlayOneShot(OpenDoorSound);
+    }
+
+    public void PlayBookSound()
+    {
+        audioSource.PlayOneShot(ClueBookSound);
+    }
+
+    public void PlayBackgroundMusic()
+    {
+        audioSource.PlayOneShot(BackgroundMusic);
     }
 }
