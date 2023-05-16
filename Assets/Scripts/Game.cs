@@ -17,18 +17,19 @@ public class Game : MonoBehaviour
     {
         _cluesFound++;
     }
-    
-    public void GotoWinIsland()
+
+    public void GotoFinalIsland(String island)
     {
-        barnaby.Warp(new Vector4(-40, -20, 0, 9));
+        if (island.Equals("Win"))
+        {
+            barnaby.Warp(new Vector4(-40, -20, 0, 9));
+            Sounds.Instance.PlayWon();
+        }
+        else
+        {
+            barnaby.Warp(new Vector4(-40, 0, 0, 9));
+            Sounds.Instance.PlayLose();
+        }
         barnaby.transform.localScale = new Vector3(1f, 1f, 1f);
-        Sounds.Instance.PlayWon();
-    }
-    
-    public void GotoLoseIsland()
-    {
-        barnaby.Warp(new Vector4(-40, 0, 0, 9));
-        barnaby.transform.localScale = new Vector3(1f, 1f, 1f);
-        Sounds.Instance.PlayLose();
     }
 }

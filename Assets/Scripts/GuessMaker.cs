@@ -7,6 +7,7 @@ public class GuessMaker : MonoBehaviour
     public Game game;
     private CanvasGroup _guessGUI;
     private bool _isHidden = true;
+    private bool _hasGuessed = false;
     
     private void Awake()
     {
@@ -34,10 +35,9 @@ public class GuessMaker : MonoBehaviour
 
     public void GuessMurderer(String guess)
     {
+        if (_hasGuessed) return;
         print("guess: " + guess);
-        if (guess.Equals("Sandie"))
-            game.GotoWinIsland();
-        else
-            game.GotoLoseIsland();
+        game.GotoFinalIsland(guess.Equals("Sandie") ? "Win" : "Lose");
+        _hasGuessed = true;
     }
 }

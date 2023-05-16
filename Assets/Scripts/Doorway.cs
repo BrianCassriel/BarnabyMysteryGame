@@ -43,8 +43,8 @@ public class Doorway : MonoBehaviour
         if (location.Equals(_mapLocations["Town"]))
             barnaby.transform.localScale = new Vector3(1f, 1f, 1f);
         else if (location.Equals(_mapLocations["HouseOne"])
-                            || location.Equals(_mapLocations["HouseTwo"])
-                            || location.Equals(_mapLocations["HouseTwo"]))
+                 || location.Equals(_mapLocations["HouseTwo"])
+                 || location.Equals(_mapLocations["HouseTwo"]))
             barnaby.transform.localScale = new Vector3(2/3f, 2/3f, 1f);
         else if (location.Equals(_mapLocations["HouseFour"]))
             barnaby.transform.localScale = new Vector3(1/2f, 1/2f, 1f);
