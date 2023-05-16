@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Game : MonoBehaviour
 {
+    public Barnaby barnaby;
     private int _cluesFound = 0;
 
     private void Start()
@@ -17,17 +18,17 @@ public class Game : MonoBehaviour
         _cluesFound++;
     }
     
-    public void ShowWinUI()
+    public void GotoWinIsland()
     {
-        print("You win!");
-        throw new NotImplementedException();
+        barnaby.Warp(new Vector4(-40, -20, 0, 9));
+        barnaby.transform.localScale = new Vector3(1f, 1f, 1f);
         Sounds.Instance.PlayWon();
     }
     
-    public void ShowLoseUI()
+    public void GotoLoseIsland()
     {
-        print("You lose!");
-        throw new NotImplementedException();
+        barnaby.Warp(new Vector4(-40, 0, 0, 9));
+        barnaby.transform.localScale = new Vector3(1f, 1f, 1f);
         Sounds.Instance.PlayLose();
     }
 }

@@ -20,9 +20,7 @@ public class Sounds : MonoBehaviour
             Instance = this;
         audioSource = gameObject.GetComponent<AudioSource>();
     }
-
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         audioSource = gameObject.GetComponent<AudioSource>();

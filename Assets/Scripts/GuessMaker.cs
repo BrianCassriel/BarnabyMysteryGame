@@ -36,8 +36,8 @@ public class GuessMaker : MonoBehaviour
     {
         print("guess: " + guess);
         if (guess.Equals("Sandie"))
-            game.ShowWinUI();
+            game.GotoWinIsland();
         else
-            game.ShowLoseUI();
+            game.GotoLoseIsland();
     }
 }

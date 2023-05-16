@@ -19729,6 +19729,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87f505162bc514d0bb050cb454e2c4b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barnaby: {fileID: 109079163}
 --- !u!1 &1190201443
 GameObject:
   m_ObjectHideFlags: 0
