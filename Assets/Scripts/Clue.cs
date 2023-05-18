@@ -6,7 +6,13 @@ public class Clue : MonoBehaviour
 {
     public Game game;
     public int clueNumber;
+    public Dialouge text;
 
+
+    public void TriggerText()
+    {
+        FindObjectOfType<DialogueManager>().StartDialouge(text);
+    }
     public int GetClueNumber()
     {
         return clueNumber;
@@ -18,6 +24,7 @@ public class Clue : MonoBehaviour
         {
             game.IncrementCluesFound();
             Destroy(gameObject);
+            TriggerText();
         }
     }
 }
