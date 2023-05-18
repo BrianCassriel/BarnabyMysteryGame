@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6f7c0f05-43c1-43fd-8e74-89dfe33a2d3e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BarnabyMystery/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BarnabyMystery/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Palletes/GroundTiles.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Palletes/GroundTiles.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ClueBook.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ClueBook.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Art/Interior/MedievalTileset/Sheets/Props Sheet.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art/Interior/MedievalTileset/Sheets/Props Sheet.png.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Doorway.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Doorway.cs" afterDir="false" />
     </list>
@@ -89,6 +88,7 @@
       <workItem from="1683935671445" duration="3000" />
       <workItem from="1684195043591" duration="3125000" />
       <workItem from="1684392669291" duration="1899000" />
+      <workItem from="1684448919044" duration="15000" />
     </task>
     <servers />
   </component>
