@@ -56,6 +56,8 @@ public class Sounds : MonoBehaviour
 
     public void PlayBackgroundMusic()
     {
-        audioSource.PlayOneShot(BackgroundMusic);
+        audioSource.clip = BackgroundMusic;
+        audioSource.loop = true;
+        audioSource.Play();
     }
 }
